@@ -5,10 +5,16 @@ a, a:hover, a:focus {
 }
 
 .navbar {
-	padding-top: 5px;
-	padding-bottom: 20px;
-	color: black;
-	background-color: white;
+	padding-top: 10px;
+	padding-bottom: 15px;
+}
+
+.navbar-brand {
+	padding: 0;
+}
+
+.navbar-toggler {
+	margin-top: 5px;
 }
 
 .navbar-brand {
