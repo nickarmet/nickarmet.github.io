@@ -4,22 +4,14 @@ a, a:hover, a:focus {
 	outline: 0;
 }
 
-.navbar {
-	padding-top: 10px;
-	padding-bottom: 15px;
-}
-
 .navbar-brand {
 	padding: 0;
+	margin-left: 150px;
+	border-bottom: 2px solid black;
 }
 
 .navbar-toggler {
 	margin-top: 5px;
-}
-
-.navbar-brand {
-	margin-left: 150px;
-	border-bottom: 2px solid black;
 }
 
 .nav-link {
@@ -46,22 +38,25 @@ a, a:hover, a:focus {
 
 .jumbotron {
 	background: none;
-	margin-top: -35%;
-	/* color: white; */
+	margin-top: -17em;
+	font-size: 1.5em;
 }
 
-.jumbotron header {
-	padding: 85px 150px;
-	color: blue;
+.buttons {
+	margin-top: 1em;
+}
+
+button {
+	margin-left: 1em;
 }
 
 .content {
-	padding-top: 50px;
-	padding-bottom: 50px;
+	margin-top: 6em;
+	margin-bottom: 1em;
 }
 
 footer {
-	padding-bottom: 20px;
+	margin-bottom: 1em;
 }
 
 i {
