@@ -30,7 +30,7 @@ a, a:hover {
 }
 
 .navbar {
-	padding-top: 15px;
+	padding-top: 5px;
 	padding-bottom: 20px;
 	color: black;
 	background-color: white;
@@ -60,11 +60,12 @@ a, a:hover {
 }
 
 .container {
-	
+
 }
 
 .content {
-	padding-top: 50px;
+	position: relative;
+	top: -250px;
 	padding-bottom: 50px;
 }
 
