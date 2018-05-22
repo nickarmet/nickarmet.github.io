@@ -1,5 +1,5 @@
 body {
-	padding-top: 75px;
+	
 }
 
 a, a:hover {
@@ -21,13 +21,19 @@ a, a:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    opacity: .60;
+}
+
+#headertext {
+	position: relative;
+	top: -390px;
 }
 
 .navbar {
 	padding-top: 15px;
-	color: gray;
-	mix-blend-mode: screen;
-	/* border-bottom: 2px solid black; */
+	padding-bottom: 20px;
+	color: black;
+	background-color: white;
 }
 
 .navbar-brand {
