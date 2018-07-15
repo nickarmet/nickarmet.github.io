@@ -1,0 +1,346 @@
+/* General Styles */
+
+html, body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background-color: #011821;
+	font-family: 'Lato', sans-serif;
+	color: white;
+	position: relative;
+	z-index: 10;
+}
+
+#background {
+	position: absolute;
+	background-image: url('bg.png');
+	opacity: 1;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -20;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+a, a:hover, a:focus {
+	color: inherit;
+	text-decoration: none;
+	outline: 0;
+}
+
+/* Add a hover effect (blue shadow) */
+#projectlink img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+/* Navbar */
+
+nav {
+	display: flex;
+    position: fixed;
+    width: 100%;
+    height: 5.3125rem;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.nav-brand {
+	padding-top: 1.25rem;
+	padding-left: 2.5rem;
+}
+
+.navbar-links {
+	margin-left: auto;
+}
+
+.nav-link {
+	margin-right: 3rem;
+}
+
+#hamburger {
+	display: none;
+}
+
+nav a:hover {
+    border-bottom: .05rem solid #ffc236;
+    padding-bottom: 2px;
+}
+
+#top a:hover{
+	border-bottom: none;
+	padding-bottom: 0;
+}
+
+/* Dynamic page location underline on nav link */
+.toggledLink {
+	border-bottom: .072rem solid #ffc236;
+	padding-bottom: 2px;
+}
+
+/* CSS Grid */
+
+.wrapper {
+	display: grid;
+	min-height: 100vh;
+	grid-template-rows: auto auto auto;
+	grid-template-columns: auto auto auto;
+	grid-template-areas:
+						"overlay overlay overlay"
+						"projects projects projects"
+						"footer footer footer";
+}
+
+.overlay {
+	grid-area: overlay;
+	position: relative;
+	margin: 9.688rem;
+	line-height: 3rem;
+}
+
+.toparrow {
+	position: absolute;
+	left: -2rem;
+	top: 1.10rem;
+}
+
+.intro {
+	font-size: 2.875rem;
+	line-height: 4rem;
+}
+
+#name {
+	font-weight: bold;
+}
+
+.text {
+	position: relative;
+	/* left: -100px; */
+}
+
+.bottomtext {
+	font-size: 1.375rem;
+	line-height: 2rem;
+}
+
+.photo {
+	position: relative;
+	text-align: center;
+}
+
+.photo:hover img {
+	background: #ffc236;
+    opacity: 0.4;
+}
+
+.text-content {
+	position: absolute;
+	display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	color: white;
+	visibility: hidden;
+	margin: 0 auto;
+	line-height: 2rem;
+}
+
+.photo:hover div {
+	visibility: visible;
+}
+
+.projects {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	grid-area: projects;
+}
+
+#projectlink img {
+    max-width: 34.063rem;
+    margin: 1rem;
+}
+
+footer {
+	grid-area: footer;
+	display: flex;
+	justify-content: space-between;
+	padding: 3rem 0;
+	margin: 0 .5rem;
+}
+
+.bottomarrow {
+	position: absolute;
+	left: -2rem;
+	top: -.25rem;
+}
+
+.footeremail {
+	position: relative;
+	margin-left: 9.6875rem;
+	display: flex;
+}
+
+.contact {
+	text-transform: uppercase;
+}
+
+.email {
+	margin-left: 2.5rem;
+}
+
+.icons {
+	display: flex;
+	margin-left: auto;
+}
+
+i {
+	padding-right: 3.4375rem;
+}
+
+@media screen and (max-width: 768px) {
+
+	body {
+		box-sizing: border-box;
+	}
+
+	#background {
+		position: absolute;
+		background-image: url('bg.png');
+		opacity: 1;
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+	    background-size: cover;
+	    z-index: -20;
+	    top: 0;
+	    left: 0;
+	    bottom: 0;
+	    right: 0;
+	}
+
+	.nav-brand {
+		position: absolute;
+		padding-left: 0;
+		padding-top: 0;
+ 		left:50%;
+	 	top:40%;
+	 	transform:translate(-50%,-50%);
+	}
+
+	.navbar-links {
+		display: none;
+		width: 100%;
+		margin: 0 auto;
+		padding-left: 5rem;
+	}
+
+	.nav-link {
+		padding-right: 1.5rem;
+	}
+
+	/* Collapsing menu styles*/
+
+	#hamburger {
+		display: initial;
+		position: absolute;
+ 		cursor: pointer;
+		margin-left: 2rem;
+		width: auto;
+		z-index: 50;
+	}
+
+	.brand-toggle-show {
+		display: none;
+	}
+
+	.navbar-toggle-show {
+		display: flex;
+		justify-content: center;
+	}
+
+	.wrapper {
+		grid-template-areas: "overlay"
+		                     "projects"
+		                     "footer";
+		.grid-template-rows: 1fr auto 30px;
+		.grid-template-columns: auto;
+	}
+
+	.overlay {
+		grid-template-areas: 'overlay';
+		margin: 1rem;
+		padding: 6rem 2rem 2rem 2rem;
+		line-height: 0;
+		z-index: -10;
+	}
+
+	.toparrow {
+		left: 0rem;
+		top: 5.75rem;
+	}
+
+	.intro {
+		font-size: 1rem;
+		line-height: 1.5em;
+	}
+
+	.bottomtext {
+		padding-top: 2rem;
+		font-size: 1rem;
+		line-height: 1.5em;
+	}
+
+	.projects {
+		grid-template-areas: 'projects';
+		margin: 2rem;
+	}
+
+	#projectlink img {
+		width: 100%;
+		margin: 0 0 1rem 0;
+	}
+
+	footer {
+		grid-template-areas: 'footer';
+		margin: 0 0 1rem 0;
+		padding: 0;
+		font-size: .5rem;
+	}
+
+	.bottomarrow {
+		position: absolute;
+		left: -1rem;
+		top: -.5rem;
+	}
+
+	.footeremail {
+		position: relative;
+		margin-left: 2rem;
+		display: flex;
+	}
+
+	.contact {
+		margin-left: 1rem;
+		text-transform: uppercase;
+	}
+
+	.email {
+		margin-left: 1rem;
+	}
+
+	i {
+		padding-right: 1rem;
+	}
+
+
+}
+
+@media screen and (max-width: 320px) {
+	.navbar-links {
+		/* margin-left: 1rem; */
+	}
+}
